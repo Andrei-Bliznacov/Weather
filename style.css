@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+}
+
+
+.inpBlock {
+  display: inline-block;
+  position: relative;
+  filter: drop-shadow(0 1px #012e3d);
+}
+
+.inpBlock:after {
+  content: "";
+  background: white;
+  width: 4px;
+  height: 20px;
+  position: absolute;
+  top: 40px;
+  right: 2px;
+  transform: rotate(135deg);
+}
+
+.inpBlock>input {
+  color: white;
+  font-size: 16px;
+  background: transparent;
+  width: 25px;
+  height: 25px;
+  padding: 10px;
+  border: solid 3px white;
+  outline: none;
+  border-radius: 35px;
+  transition: width 0.5s;
+}
+
+.inpBlock>input::placeholder {
+  color: #efefef;
+  opacity: 0;
+  transition: opacity 150ms ease-out;
+}
+
+.inpBlockinput:focus::placeholder {
+  opacity: 1;
+}
+
+.inpBlock>input:focus,
+.inpBlock>input:not(:placeholder-shown) {
+  width: 250px;
+}
+
+body{
+  background-image: url('./img/weth.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden; 
+}
+
+.cloud{
+  height: 50vh;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}
+
+.imgCloud{
+  animation: cld calc(15s * var(--i)) linear infinite;
+  opacity: .7;
+  width: 100%;
+  max-width: 100vw;
+  height: auto;
+  position: absolute;
+  bottom: 0px;
+}
+
+@keyframes cld{
+  0%{
+    transform: translateX(-100%);
+  }
+  100%{
+    transform: translateX(100%);
+  }
+}
+
+.block{
+  background-color: rgb(255 255 255 / 26%);
+  width: 25%;
+  padding: 20px 0 20px 20px;
+  z-index: 999;
+  position: relative;
+  background: linear-gradient(#fffffffc,#0000ff5c,#0000ffad);
+  border-radius: 20px;
+  transition: all 0.5s;
+}
+.block:hover{
+  transform: scale(1.1);
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 100px;
+}
+
+.dataBlock h3{
+  font-family: cursive;
+  font-size:25px;
+  color:#04087d ;
+}
+
+.dataBlock p{
+  font-family: sans-serif;
+  color: #fff;
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+.search{
+  background: linear-gradient(#fffffffc,#0000ff5c,#0000ffad);
+  height: fit-content;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.searchSpan{
+  font-family: cursive;
+  font-size:20px;
+  color:#fff ;
+  margin-right: 10px;
+}
+
+.imgLogo{
+  border-radius: 18px;
+  width: 80px;
+  height: 80px;
+  margin-left: -100px;
+  margin-top: -80px;
+}
